@@ -1,33 +1,112 @@
+:root {
+    --cor-branca: #FFFFFF;
+    --cor-cinza: #C0C0C0;
+    --cor-preta: #000000;
+    --cor-azul-neon: #00FFFF;
+    --cor-azul-escuro: #111111;
+    --cor-botao: #167BF7;
+    --cor-hover-botao: #0D5BA6;
+    --cor-glow: #00FFFF; /* Azul neon */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #FFC0CB; /* Rosa claro */
-    color: white;
-    font-family: "Bai Jamjuree", sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-azul-escuro);
+    color: var(--cor-branca);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 700px;
-    margin: 0;
+    height: 100vh;
+    background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
 }
 
-button {
-    background-color: #FF69B4; /* Rosa quente */
-    color: white;
-    font-family: "Bai Jamjuree", sans-serif;
-}
-
-.passo {
-    display: none;
-}
-
-.passo.ativo {
-    display: block;
-}
-
-main {
+.banner-container {
+    position: relative;
     text-align: center;
-    max-width: 90%;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    background-color: var(--cor-preta);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--cor-glow);
 }
 
-img {
-    max-width: 90%;
+.banner-container h1 {
+    font-size: 4rem;
+    color: var(--cor-azul-neon);
+    text-shadow: 0 0 10px var(--cor-glow);
+}
+
+.banner-container h2 {
+    font-size: 2rem;
+    color: var(--cor-cinza);
+    margin-top: 10px;
+}
+
+.banner-container p {
+    font-size: 1.5rem;
+    color: var(--cor-branca);
+    margin: 10px 0;
+}
+
+.banner-container .desconto {
+    font-size: 3rem;
+    color: var(--cor-glow);
+    font-weight: bold;
+}
+
+.banner-container .parcelas, .frete {
+    font-size: 1.5rem;
+    color: var(--cor-cinza);
+}
+
+.banner-container .produtos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.banner-container .produtos img {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0 0 10px var(--cor-glow));
+}
+
+.banner-container .produtos img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#comprar-btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background-color: var(--cor-botao);
+    color: var(--cor-branca);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--cor-glow);
+}
+
+#comprar-btn:hover {
+    background-color: var(--cor-hover-botao);
+}
+
+.background-arrows {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('https://www.transparenttextures.com/patterns/diagmonds.png');
+    opacity: 0.3;
 }
